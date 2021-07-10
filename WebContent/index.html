@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>HighRadius</title>
+</head>
+<body>
+
+    <div class="mainhead">
+            <img class="logo" src="images/Group 20399.svg" >
+            <img class="iconHR" src="images/logo.svg">
+    </div>
+    <h4>
+            Invoice List
+    </h4>
+    <div class="grid">
+        <div class="top-box">
+            <button id="add" class="b1 button"> <img class="icon1" src="images/Path 18189.svg">
+                Add</button>
+            <button id ="edit" class="b2 button"> <img class="icon2" src="images/Path 18191.svg">
+                Edit</button>
+            <button id= "delete" class="b3 button"> <img class="icon3" src="images/Path 18189-1.svg">
+                Delete</button>
+            <span class="searchbox"><input type="text" class="searchinvoice button" placeholder="Search by Invoice Number" ></span>
+        </div>
+        <table id="myTable">
+        <tr>
+            <th><input type="checkbox" class="check"/></th>
+            <th>Customer Name</th>
+            <th>Customer #</th>
+            <th>Invoice #</th>
+            <th>Invoice Amount</th>
+            <th>Due Date</th>
+            <th>Predicted Payment Date</th>
+            <th>Notes</th>
+        </tr>
+        </table>
+    </div>
+
+
+    <div id="xte" class="addmodal">
+      <form class="modal-content">
+        <div class="modal-header">
+          <span id = "c1"class="close">&times;</span>
+          <h3>Add Invoice</h3>
+        </div>
+          <div class="add-left">
+            <div class="content-box">
+              <div class="label">Customer Names <span class="imp">*</span></div>
+              <input type="text">
+            </div>
+            <div class="content-box">
+              <div class="label">Customer No. <span class="imp">*</span></div>
+              <input type="text">
+            </div>
+            <div class="content-box">
+              <div class="label">Invoice No. <span class="imp">*</span></div>
+              <input type="text">
+            </div>
+            <div class="content-box">
+              <div class="label">Invoice Amount <span class="imp">*</span></div>
+              <input type="text">
+            </div>
+          </div>
+          <div class="add-right">
+            <div class="content-box">
+              <div class="label">Due Date <span class="imp">*</span></div>
+              <input type="date" placeholder=" ">
+            </div>
+            <div class="content-box notes">
+              <div class="label">Notes</div>
+              <textarea></textarea>
+            </div>
+          </div>
+          <div id="addfoot" class="modal-footer">
+            <button id="cancel1">
+              Cancel</button>
+            <input type="reset" value="Clear"/>
+            <button id="adddata" >
+              Add</button>
+          </div>
+        </form>
+      </div>
+
+
+    <div id="xyz" class="editmodal">
+      <div class="editcontent">
+        <div class="editheader">
+          <span id="c2"class="close">&times;</span>
+          <h2>Edit Invoice</h2>
+        </div>
+        <form  class="editbody">
+          <div class="editinvoice">
+              <label >Invoice Amount</label>
+              <input class="inp" type="text">
+          </div>
+          <div class="editnotes">
+              <label>Notes</label>
+              <textarea class="bigbox" rows="10"></textarea>
+          </div>
+        <div class="editfooter">
+            <input type="reset" value="Reset">
+            <button class="save">Save</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+
+
+
+    <div id="abc" class="delmodal">
+      <div class="delcontent">
+        <div class="delheader">
+          <span id="c3"class="close">&times;</span>
+          <h2>Delete Invoice</h2>
+        </div>
+        <form  class="delbody">
+          <div class="delinvoice">
+            <p class="model-para">You'll lose your record(s) after this action. We can't recover them once you delete. <br><br> Are you sure you want to 
+            <span style="color:#FF5E5E;">permanently delete</span> them?</p>
+          </div>
+        <div class="delfooter">
+          <button class="delbutton">Delete</button>
+          <button id="cancel2"class="cancel">Cancel</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+
+    
+  <script src="front.js"></script>
+
+</body>
+</html>
